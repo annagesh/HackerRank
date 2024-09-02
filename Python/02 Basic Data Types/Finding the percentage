@@ -1,0 +1,14 @@
+def percentage(student_name,results):
+    marks_obtained = results[student_name]
+    return (sum(marks_obtained)/len(marks_obtained))
+
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    print (format(percentage(query_name,student_marks),".2f"))
