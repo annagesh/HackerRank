@@ -1,0 +1,13 @@
+def secondLowest(results):
+    secondLowestMarks = sorted(set(_[1] for _ in results))[1]
+    students = sorted(_[0] for _ in results if _[1] == secondLowestMarks)
+    return "\n".join(students)
+
+
+if __name__ == '__main__':
+    results = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        results.append([name,score])
+    print (secondLowest(results))
