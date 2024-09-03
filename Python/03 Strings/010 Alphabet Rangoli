@@ -1,0 +1,15 @@
+def print_rangoli(size):
+    # your code goes here
+    list_of_alphabets = [chr(x) for x in range(ord('a'),ord('z')+1)]
+    string = [list_of_alphabets[i] for i in range(size)]
+    items = list(range(size))
+    items = items[:-1] + items[::-1]
+
+    for i in items:
+        temp = string[-(i+1):]
+        row = temp[::-1]+temp[1:]
+        print ("-".join(row).center(size*4-3,'-'))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
