@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def print_pattern(N,M,flag):
+    if flag == 0:
+        x = 1
+        for i in range(int(N / 2)):
+            y = int((M - (x * 3)) / 2)
+            print("-" * y + ".|." * x + "-" * y)
+            x = x + 2
+    elif flag == 1:
+        x=N-2
+        for i in reversed(range(int(N / 2))):
+            y = int((M - (x * 3)) / 2)
+            print("-" * y + ".|." * x + "-" * y)
+            x = x - 2
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N,M = map(int,input().split())
+msg = "WELCOME"
+print_pattern(N,M,flag=0)
+z = int((M-len(msg))/2)
+print ("-"*z+msg+"-"*z)
+print_pattern(N,M,flag=1)
