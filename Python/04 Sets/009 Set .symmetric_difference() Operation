@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+e = int(input())
+english_paper_students = set(map(int,input().split()))
+f = int(input())
+french_paper_students = set(map(int,input().split()))
+print (len(english_paper_students.symmetric_difference(french_paper_students)))
