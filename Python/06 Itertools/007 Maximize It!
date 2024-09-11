@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+from itertools import product
+
+def sqrt_ele(e):
+    return sum(x * x for x in e) % M
+
+K, M = map(int,input().split())
+elements = []
+for _ in range(K):
+    elements.append(map(int,input().split()[1:]))
+    
+print(max(list(map(sqrt_ele, list(product(*elements))))))
