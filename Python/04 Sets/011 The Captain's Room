@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+k = int(input())
+room_numbers = list(map(int,input().split()))
+room_numers_set = set(room_numbers)
+sum_room_numbers = sum(room_numbers)
+sum_room_numbers_set = sum(room_numers_set) * k
+captain_room_number = (sum_room_numbers_set - sum_room_numbers) // (k-1)
+print (captain_room_number)
