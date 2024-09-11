@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations
+n = int(input())
+letters = input().split()
+k = int(input())
+count = 0
+letter_combinations = list(combinations(letters,k))
+filtered_combinations = [i for i in letter_combinations if 'a' in i]
+print (len(filtered_combinations) / len(letter_combinations))
