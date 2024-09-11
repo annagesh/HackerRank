@@ -1,0 +1,6 @@
+from itertools import permutations
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+string, r = input().split()
+string_perm = sorted(list(permutations(string,int(r))))
+for x in string_perm:
+    print ("".join(x))
