@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath
+
+n = input()
+complex_number =  complex(n)
+print (abs(complex_number))
+print (cmath.phase(complex_number))
