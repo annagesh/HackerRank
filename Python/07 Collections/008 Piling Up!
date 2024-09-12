@@ -1,0 +1,14 @@
+from collections import deque
+
+for _ in range(int(input())):
+    _, d = input(), deque(map(int,input().split()))
+    value = 'Yes'
+    for cube in (reversed(sorted(d))):
+        if cube == d[-1]:
+            d.pop()
+        elif cube == d[0]:
+            d.popleft()
+        else:
+            value = 'No'
+            break
+    print (value)
