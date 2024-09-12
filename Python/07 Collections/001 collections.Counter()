@@ -1,0 +1,14 @@
+from collections import Counter
+no_of_shoes, size_of_shoes = int(input()), map(int,input().split())
+available_shoes = Counter(size_of_shoes)
+total_earnings = 0
+
+for _ in range(int(input())):
+    shoe_size, cost = map(int,input().split())
+    if shoe_size in available_shoes.keys():
+        available_shoes[shoe_size] = available_shoes[shoe_size] - 1
+        total_earnings += cost
+        if available_shoes[shoe_size] == 0:
+            del available_shoes[shoe_size]
+            
+print (total_earnings)
