@@ -1,0 +1,9 @@
+from collections import deque
+d = deque()
+for _ in range(int(input())):
+    operations = input().split()
+    if len(operations) > 1:
+        eval('d.' + operations[0] + '(' + operations[1] + ')')
+    else:
+        eval('d.' + operations[0] + '()')
+print (*d)
